@@ -4,4 +4,4 @@ These notes are written by Chen Sixiang.
 [点击这里跳转到JavaStudyWeek1](https://chen-dll.github.io/Software-Group/JavaStudyWeek-1.html) 
 
 ## Week 2
-[点击这里跳转到JavaStudyWeek1](https://chen-dll.github.io/Software-Group/JavaStudyWeek-2.html) 
+[点击这里跳转到JavaStudyWeek2](https://chen-dll.github.io/Software-Group/JavaStudyWeek-2.html) 
