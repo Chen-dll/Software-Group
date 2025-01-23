@@ -91,7 +91,7 @@ data-filename="Image.png" />
   
 
 -   地址赋`NULL`
-    会导致栈内存储存的地址没了，堆内存开辟的空间没有被引用了，找不到就会报错  
+    会导致栈内存储存的地址没了，堆内存开辟的空间没有被引用了，找不到就会报错  
     （空指针异常）
 
 <img src="JavaStudyWeek-2.2_files/Image%20%5B17%5D.png"
@@ -169,7 +169,7 @@ data-filename="Image.png" />
 -   设计规范：合理隐藏、合理暴露
 
 -   对于变量，在对象里面把成员变量都`private` ，写一些`public`
-    的方法提供给调用者使用  `get` `set`
+    的方法提供给调用者使用  `get` `set`
 
 -   对于方法，就是看需不需要提供给外界，不需要就 `private`
 
@@ -234,7 +234,3 @@ data-filename="Image.png" />
 <img src="JavaStudyWeek-2.2_files/Image%20%5B39%5D.png"
 style="--en-uploadstate:uploaded;" type="image/png"
 data-filename="Image.png" />
-
-  
-
- 
