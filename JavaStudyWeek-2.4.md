@@ -38,8 +38,8 @@ data-filename="Image.png" />
 style="--en-uploadstate:uploaded;" type="image/png"
 data-filename="Image.png" />
 
--   面试题2，字符串只要是在运算，就会新建一个对象。但是你一行写下来一些确定的字面量相运算 
-            比如`"a"+"b"+"c"` ，那就会自动优化成 `"abc"`
+-   面试题2，字符串只要是在运算，就会新建一个对象。但是你一行写下来一些确定的字面量相运算 
+            比如`"a"+"b"+"c"` ，那就会自动优化成 `"abc"`
     ，也是为了节省内存，所以下面那个都是指向字符串常量池里的`"abc"`
     ，没有在堆内存新创建一个对象。
 
@@ -56,7 +56,7 @@ style="--en-uploadstate:uploaded;" type="image/png"
 data-filename="Image.png" />
 
 -   -   一共就是 临时的`StringBuilder` 对象 加上 `toString()`
-        方法生成的新的 `String`  对象。
+        方法生成的新的 `String`  对象。
 
 <img src="JavaStudyWeek-2.4_files/Image%20%5B7%5D.png"
 style="--en-uploadstate:uploaded;" type="image/png"
@@ -228,7 +228,7 @@ data-filename="Image.png" />
 
 -   解决方案一，每次删除后`i--`
     让索引回退到被删后，相邻的往前移的元素，这样就能遍历整个数组，而不会跳过往前移的部分。对于被删元素是第一个，删完之后索引变成
-    `i=-1` ，再参与循环的时候，    `i++` 后就是`i=0`
+    `i=-1` ，再参与循环的时候，    `i++` 后就是`i=0`
     ，就相当于索引还是0，
 
 -   说白了就是一退一加回到被删索引的位置，在第2个位置被删就推到第1个位置后再加回到第2个位置，那么此时索引指的就是被删除之后，本来会被跳过的那个相邻元素。
@@ -291,7 +291,3 @@ data-filename="Image.png" />
 <img src="JavaStudyWeek-2.4_files/Image%20%5B49%5D.png"
 style="--en-uploadstate:uploaded;" type="image/png"
 data-filename="Image.png" />
-
-  
-
- 
