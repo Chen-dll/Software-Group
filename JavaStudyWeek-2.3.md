@@ -4,8 +4,8 @@
 
 -   案例
 
--   对于操作类里面写了有参数构造器后需不需要添加无参数构造器，一般是可以不用，因为都是在 
-               `main` 方法里 `new`
+-   对于操作类里面写了有参数构造器后需不需要添加无参数构造器，一般是可以不用，因为都是在 
+               `main` 方法里 `new`
     的时候直接在小括号里传数据，然后通过有参数构造器里面对`this.`
     赋值，不会只写个()，但是如果出现这种情况，就会提示报错，就需要加上无参数构造器。
 
@@ -55,7 +55,7 @@ data-filename="Image.png" />
 
 -   方法重载，就是同一个类里面可以有同样名字的方法，但是传进去的参数不一样（形参列表不同），会自动按照参数匹配的，其他的修饰符还有别的返回值什么的都不管，形参也只考虑个数、类型、顺序，不管叫什么名称。
 
--   修饰符 `public`  就是公共，`static` 就是全局。
+-   修饰符 `public`  就是公共，`static` 就是全局。
 
 <img src="JavaStudyWeek-2.3_files/Image%20%5B7%5D.png"
 style="--en-uploadstate:uploaded;" type="image/png"
@@ -130,7 +130,7 @@ data-filename="Image.png" />
 -   -   在重名的时候，这里传给方法的是及格线，然后这个方法是在`Student`
         类里面的，在`main` 方法里面 `new`
         了类，赋值操作填入数据后，然后`类名.方法`
-        调用这个方法，给出及格线后，           `this.score`
+        调用这个方法，给出及格线后，           `this.score`
         就是调用目前对象，也就是新建的类里面的的`score`
         数据，与传入方法的及格线进行比较。
 
@@ -244,7 +244,7 @@ data-filename="Image.png" />
 -   可以用`.charAt(i)`
     来获取对应索引位置的字符，然后实现字符串里面逐个字符的输出
 
--   可以用`.toCharArray()`  比如 `char[] chars = s.toCharArray();`
+-   可以用`.toCharArray()`  比如 `char[] chars = s.toCharArray();`
     把字符串转为字符数组，然后可以再遍历，输出
 
 <img src="JavaStudyWeek-2.3_files/Image%20%5B36%5D.png"
@@ -385,7 +385,3 @@ data-filename="Image.png" />
 <img src="JavaStudyWeek-2.3_files/Image%20%5B56%5D.png"
 style="--en-uploadstate:uploaded;" type="image/png"
 data-filename="Image.png" />
-
-  
-
- 
