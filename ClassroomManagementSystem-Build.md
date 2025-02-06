@@ -84,9 +84,154 @@ data-filename="Image.png" />
 
 <img src="ClassroomManagementSystem-Build_files/Image%20%5B3%5D.png"
 style="--en-uploadstate:uploaded;" type="image/png"
+data-filename="Image.png" /><img src="ClassroomManagementSystem-Build_files/Image%20%5B4%5D.png"
+style="--en-uploadstate:uploaded;" type="image/png"
+data-filename="Image.png" /><img src="ClassroomManagementSystem-Build_files/Image%20%5B5%5D.png"
+style="--en-uploadstate:uploaded;" type="image/png"
+data-filename="Image.png" /><img src="ClassroomManagementSystem-Build_files/Image%20%5B6%5D.png"
+style="--en-uploadstate:uploaded;" type="image/png"
+data-filename="Image.png" /><img src="ClassroomManagementSystem-Build_files/Image%20%5B7%5D.png"
+style="--en-uploadstate:uploaded;" type="image/png"
+data-filename="Image.png" /><img src="ClassroomManagementSystem-Build_files/Image%20%5B8%5D.png"
+style="--en-uploadstate:uploaded;" type="image/png"
+data-filename="Image.png" /><img src="ClassroomManagementSystem-Build_files/Image%20%5B9%5D.png"
+style="--en-uploadstate:uploaded;" type="image/png"
 data-filename="Image.png" />
+
+-   使用了以下几个外部库：
+
+1.  `ch.qos.logback.db:logback-classic-db:1.2.11.1`
+
+2.  `ch.qos.logback.db:logback-core-db:1.2.11.1`
+
+3.  `org.junit.jupiter:junit-jupiter:5.11.4`
+
+4.  `mysql:mysql-connector-java:8.0.30`
+
+5.  `org.slf4j:slf4j-api:2.0.7`
+
+6.  `com.zaxxer:HikariCP:6.0.0`
 
 -   最后写了自述文档，完结（把项目公开
 
 -   后续想把项目导个jar包，数据库也导出来好移植
 
+-   配置maven setting.xml里面的镜像（下载依赖快很多
+    没设置以前要等个十几分钟
+
+-   这里少些多写都会创建maven失败
+
+<img src="ClassroomManagementSystem-Build_files/Image%20%5B10%5D.png"
+style="--en-uploadstate:uploaded;" type="image/png"
+data-filename="Image.png" />
+
+-   在idea配置了maven 然后把原来写好的文件复制到用maven新构建的项目里面
+    接着开始配置
+
+<!-- -->
+
+-   pom.xml也是异常难配置 下载了一万个插件 然后构建配置也是异常多错误
+
+-   这个报错是没有指定Java版本
+
+<img src="ClassroomManagementSystem-Build_files/Image%20%5B11%5D.png"
+style="--en-uploadstate:uploaded;" type="image/png"
+data-filename="Image.png" />
+
+-   Failed to execute goal
+    org.apache.maven.plugins:maven-jar-plugin:3.2.0:jar (default) on
+    project your-project: You have to use a classifier to attach
+    supplemental artifacts to the project instead of replacing them.
+    这个报错需要指定一个 `classifier`
+
+-   终于成了
+
+<img src="ClassroomManagementSystem-Build_files/Image%20%5B12%5D.png"
+style="--en-uploadstate:uploaded;" type="image/png"
+data-filename="Image.png" />
+
+-   主清单属性要选好主类路径
+
+<img src="ClassroomManagementSystem-Build_files/Image%20%5B13%5D.png"
+style="--en-uploadstate:uploaded;" type="image/png"
+data-filename="Image.png" /><img src="ClassroomManagementSystem-Build_files/Image%20%5B14%5D.png"
+style="--en-uploadstate:uploaded;" type="image/png"
+data-filename="Image.png" />
+
+-   成了一半，看来是依赖没加进去
+
+<img src="ClassroomManagementSystem-Build_files/Image%20%5B15%5D.png"
+style="--en-uploadstate:uploaded;" type="image/png"
+data-filename="Image.png" />
+
+-   又错
+
+<img src="ClassroomManagementSystem-Build_files/Image%20%5B16%5D.png"
+style="--en-uploadstate:uploaded;" type="image/png"
+data-filename="Image.png" />
+
+-   网上找的方法 最后成了 用maven-shade-plugin
+
+<img src="ClassroomManagementSystem-Build_files/Image%20%5B17%5D.png"
+style="--en-uploadstate:uploaded;" type="image/png"
+data-filename="Image.png" />
+
+-   剩下的时间都在处理警告 外部依赖巨多重复的地方（疯狂加过滤语句
+
+<img src="ClassroomManagementSystem-Build_files/Image%20%5B18%5D.png"
+style="--en-uploadstate:uploaded;" type="image/png"
+data-filename="Image.png" /><img src="ClassroomManagementSystem-Build_files/Image%20%5B19%5D.png"
+style="--en-uploadstate:uploaded;" type="image/png"
+data-filename="Image.png" /><img src="ClassroomManagementSystem-Build_files/Image%20%5B20%5D.png"
+style="--en-uploadstate:uploaded;" type="image/png"
+data-filename="Image.png" />
+
+-   最后演都不演了 导太多包太乱了（不管了
+
+<img src="ClassroomManagementSystem-Build_files/Image%20%5B21%5D.png"
+style="--en-uploadstate:uploaded;" type="image/png"
+data-filename="Image.png" /><img src="ClassroomManagementSystem-Build_files/Image%20%5B22%5D.png"
+style="--en-uploadstate:uploaded;" type="image/png"
+data-filename="Image.png" />
+
+-   好的
+
+<img src="ClassroomManagementSystem-Build_files/Image%20%5B23%5D.png"
+style="--en-uploadstate:uploaded;" type="image/png"
+data-filename="Image.png" />
+
+-   最后还是都删了这些过滤语句（因为可能过滤掉有用的了 出bug
+
+<img src="ClassroomManagementSystem-Build_files/Image%20%5B24%5D.png"
+style="--en-uploadstate:uploaded;" type="image/png"
+data-filename="Image.png" />
+
+-   控制台出现了些日志提示 直接全关了懒得整（直接用slf4j-nop版本
+
+<img src="ClassroomManagementSystem-Build_files/Image%20%5B25%5D.png"
+style="--en-uploadstate:uploaded;" type="image/png"
+data-filename="Image.png" />
+
+-   最终
+
+<img src="ClassroomManagementSystem-Build_files/Image%20%5B26%5D.png"
+style="--en-uploadstate:uploaded;" type="image/png"
+data-filename="Image.png" />
+
+-   最后这个maven项目导了这么多库（可能有些重复的 懒得删了
+
+<img src="ClassroomManagementSystem-Build_files/Image%20%5B27%5D.png"
+style="--en-uploadstate:uploaded;" type="image/png"
+data-filename="Image.png" />
+
+-   再装个Launch4j 把jar转exe
+
+<img src="ClassroomManagementSystem-Build_files/Image%20%5B28%5D.png"
+style="--en-uploadstate:uploaded;" type="image/png"
+data-filename="Image.png" />
+
+  
+
+# <span style="font-size: 60pt;"><span style="color: #FF0000;">完结🌼</span></span>
+
+  
