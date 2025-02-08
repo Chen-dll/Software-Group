@@ -230,9 +230,75 @@ data-filename="Image.png" />
 style="--en-uploadstate:uploaded;" type="image/png"
 data-filename="Image.png" />
 
-  
+-   后面发现没有配置java环境的用不了 又去用exe4j 还要下载老版本的jdk
+
+<img src="ClassroomManagementSystem-Build_files/Image%20%5B29%5D.png"
+style="--en-uploadstate:uploaded;" type="image/png"
+data-filename="Image.png" />
+
+-   结果一个德性
+
+<img src="ClassroomManagementSystem-Build_files/Image%20%5B30%5D.png"
+style="--en-uploadstate:uploaded;" type="image/png"
+data-filename="Image.png" />
+
+-   后面直接学习一手Inno Setup
+
+-   <a href="https://blog.csdn.net/xks18232047575/article/details/143177143"
+    rev="en_rl_none">https://blog.csdn.net/xks18232047575/article/details/143177143</a>
+
+-   但是要写个bat静默配置环境 巨难写（一键到位就是麻烦
+
+-   一开始准备了msi安装mysql发现很多设置比较难搞，最后直接下免安装的再配置，再一起打包
+
+<img src="ClassroomManagementSystem-Build_files/Image%20%5B31%5D.png"
+style="--en-uploadstate:uploaded;" type="image/png"
+data-filename="Image.png" />
+
+-   批处理的冰山一角
+
+<img src="ClassroomManagementSystem-Build_files/Image%20%5B32%5D.png"
+style="--en-uploadstate:uploaded;" type="image/png"
+data-filename="Image.png" />
+
+-   批处理配置环境变量有点问题 （省略一天的调试
+
+<img src="ClassroomManagementSystem-Build_files/Image%20%5B33%5D.png"
+style="--en-uploadstate:uploaded;" type="image/png"
+data-filename="Image.png" />
+
+-   配置个虚拟机试试看 win10镜像官网有工具 可以不选家庭版的版本
+    在虚拟机就有更多选择
+
+-   重点（卡了一个多小时请稍候
+
+-   https://blog.csdn.net/qq\_32392597/article/details/97973332
+
+<img src="ClassroomManagementSystem-Build_files/Image%20%5B34%5D.png"
+style="--en-uploadstate:uploaded;" type="image/png"
+data-filename="Image.png" />
+
+-   还有就是虚拟机网络配置 选桥接模式 然后另外
+
+<img src="ClassroomManagementSystem-Build_files/Image%20%5B35%5D.png"
+style="--en-uploadstate:uploaded;" type="image/png"
+data-filename="Image.png" />
+
+-   最后
+
+<img src="ClassroomManagementSystem-Build_files/Image%20%5B36%5D.png"
+style="--en-uploadstate:uploaded;" type="image/png"
+data-filename="Image.png" /><img src="ClassroomManagementSystem-Build_files/Image%20%5B37%5D.png"
+style="--en-uploadstate:uploaded;" type="image/png"
+data-filename="Image.png" />
+
+-   再安装vmware-tool比较顺畅 操作和传文件
+
+-   成功！
+-   最后写了安装和卸载指引
+
+<img src="ClassroomManagementSystem-Build_files/Image%20%5B38%5D.png"
+style="--en-uploadstate:uploaded;" type="image/png"
+data-filename="Image.png" />
 
 # <span style="font-size: 60pt;"><span style="color: #FF0000;">完结🌼</span></span>
-2025/2/6 21:39
-
-  
